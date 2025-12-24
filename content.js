@@ -1,7 +1,8 @@
-function changeZIndex() {
-  document.querySelectorAll("img").forEach((img) => {
-    img.style.zIndex = "9999";
-  });
-}
+const highZIndex = 9999;
 
-setInterval(changeZIndex, 1000);
+document.addEventListener('load', (e) => {
+  const target = e.target;
+  if (target.tagName === 'IMG') {
+    target.style.zIndex = highZIndex; 
+  }
+}, true);
