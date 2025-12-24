@@ -1,0 +1,14 @@
+{
+  "manifest_version": 3,
+  "name": "Instagram Image Downloader",
+  "version": "1.0",
+  "description": "인스타그램 사진을 다운로드하는 크롬 익스텐션",
+  "permissions": ["scripting"],
+  "host_permissions": ["https://*.instagram.com/*"],
+  "content_scripts": [
+    {
+      "matches": ["https://*.instagram.com/*"],
+      "js": ["content.js"]
+    }
+  ]
+}
